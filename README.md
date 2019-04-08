@@ -1,2 +1,2 @@
 # Cuboidia
-Puzzle game with cubes
+Unity game for puzzle lovers for the Android

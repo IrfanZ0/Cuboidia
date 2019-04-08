@@ -1,0 +1,58 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+RWTexture2D<float4> tex;
+
+[numthreads(8, 8, 1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+	// TODO: insert actual code here!
+	int i = id.x + id.y * 1024;
+
+
+	tex[id.xy] = float4(1, 0, 0, 0.6);
+}
+
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+
+//float offset;
+//
+//
+//struct PositionBuffer
+//{
+//	float3 pos;
+//};
+//
+//struct OffsetBuffer
+//{
+//	float offset;
+//};
+//
+//struct ColorBuffer
+//{
+//	float4 color;
+//};
+//
+//struct OutPutBuffer
+//{
+//	float4 output;
+//};
+//
+//RWStructuredBuffer<PositionBuffer> posBuffer;
+//RWStructuredBuffer<OffsetBuffer> offsetBuffer;
+//RWStructuredBuffer<ColorBuffer> colorBuffer;
+//RWStructuredBuffer<OutPutBuffer> outputBuffer;
+//
+//void Stripe(float3 p, int i)
+//{
+//	p.z = posBuffer[0].pos + offset[i].offset;
+//
+//}
+
+
+
+
+
+
